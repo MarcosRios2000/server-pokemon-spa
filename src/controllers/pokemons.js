@@ -6,7 +6,7 @@ const axios = require("axios");
 async function requestPokemons(req, res, next) {
   try {
     const API_Answer = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=36"
+      "https://pokeapi.co/api/v2/pokemon?limit=151"
     );
     const API_Pokemons = [];
     for await (const element of API_Answer.data.results) {
